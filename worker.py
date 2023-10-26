@@ -425,7 +425,9 @@ class Worker(threading.Thread):
     def _handle_url(self, data, start_msg):
         with youtube_dl.YoutubeDL(self.ydl_opts) as ydl:
             data = ydl.extract_info(url=data["url"], download=False)
-        self._handle_playlist(data, start_msg)
+        if data.get("_type"):
+            self._handle_playlist(data, start_msg)
+        self.__show_one(data=data, message_id=start_msg["message_id"])
 
     def _create_format_buttons(self, formats):
         """Create buttons for available formats."""
