@@ -1,0 +1,41 @@
+# Language parameters
+[Language]
+# The default language to be set for users whose language cannot be autodetected or whose language is not enabled
+default_language = "en"
+# The language to fallback to if a string is missing in a specific language
+# You should set it to either "it" or "en", other languages may be missing some strings as bot is updated
+fallback_language = "en"
+
+
+# Database parameters
+[Database]
+# The database engine you want to use.
+# Refer to http://docs.sqlalchemy.org/en/latest/core/engines.html for the possible settings.
+engine = "sqlite:///database.sqlite"
+
+
+# Telegram bot parameters
+[Telegram]
+# Your bot token goes here. Get one from https://t.me/BotFather!
+token = "123456789:YOUR_TOKEN_GOES_HERE_______________"
+# Time in seconds before a conversation (thread) with no new messages expires
+# A lower value reduces memory usage, but can be inconvenient for the users
+conversation_timeout = 7200
+# Time to wait before sending another update request if there are no messages
+long_polling_timeout = 30
+# Time in seconds before retrying a request if it times out
+timed_out_pause = 1
+# Time in seconds before retrying a request that returned an error
+error_pause = 5
+# Number of connections to keep in the connection pool
+con_pool_size = 10
+
+
+# Logging settings
+[Logging]
+# The output format for the messages printed to the console
+# See https://docs.python.org/3/library/logging.html#logrecord-attributes for information about the {}-attributes
+format = "{asctime} | {threadName} | {name} | {message}"
+# Logging level: ignore all log entries with a level lower than the specified one
+# Valid options are FATAL, ERROR, WARNING, INFO, and DEBUG
+level = "INFO"

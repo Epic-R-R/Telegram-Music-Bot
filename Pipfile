@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-telegram-bot = "==13.8"
+requests = "*"
+toml = "==0.10.2"
+sqlalchemy = "==1.4.14"
+setuptools = "*"
+youtube-dl = "==2021.12.17"
+python-dotenv = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
+python_full_version = "3.10.12"
